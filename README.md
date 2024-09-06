@@ -1,14 +1,18 @@
 En este repositorio vamos a aproximar numéricamente las soluciones de sistemas de ecuaciones diferenciales algebraicas de índice 1, es decir, problemas de la forma:
-$$\begin{cases}
+```math
+\begin{cases}
     y'= f(y,z), \\
     0 = g(y,z),
-\end{cases}$$
+\end{cases}
+```
 donde $f: \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^n$, $g: \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^m$ y y $g_z$ es invertible en un entorno de la solución, siendo
-$$g_z(y,z) = \begin{bmatrix}
+```math
+g_z(y,z) = \begin{bmatrix}
 \dfrac{\partial g_1 }{\partial z_1}(y,z) & \ldots & \dfrac{\partial g_1 }{\partial z_m}(y,z)\\
 \vdots & \ddots & \vdots\\
 \dfrac{\partial g_m }{\partial z_1}(y,z) & \ldots & \dfrac{\partial g_m }{\partial z_m}(y,z)
-\end{bmatrix}.$$
+\end{bmatrix}.
+```
 Dependiendo del valor de $n$ y $m$ distinguimos los siguientes archivos:
 - $n=1$ y $m=1$: `state space form n1m1.py` y `epsilon encajado n1m1.py`.
 - $n \ge 2$ y $m=1$: `state space form n2m1.py`.
